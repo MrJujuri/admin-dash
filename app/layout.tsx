@@ -45,9 +45,9 @@ export default function RootLayout({
             <Link href="/" className="hover:text-blue-300 transition">
               Beranda
             </Link>
-            <Link href="/dokumentasi" className="hover:text-blue-300 transition">
+            {/* <Link href="/dokumentasi" className="hover:text-blue-300 transition">
               Dokumentasi
-            </Link>
+            </Link> */}
             <Link href="/divisi" className="hover:text-blue-300 transition">
               Divisi
             </Link>
