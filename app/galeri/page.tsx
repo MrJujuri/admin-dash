@@ -65,7 +65,7 @@ export default function Galeri() {
             onClick={() => setSelected(null)}
           >
             <motion.div
-              className="relative w-full max-w-4xl flex justify-center"
+              className="relative flex justify-center items-center max-w-4xl w-full"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
@@ -83,7 +83,7 @@ export default function Galeri() {
               {/* Tombol close */}
               <button
                 onClick={() => setSelected(null)}
-                className="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg"
+                className="absolute top-0 right-0 bg-red-600 hover:bg-red-700 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg"
               >
                 ×
               </button>
