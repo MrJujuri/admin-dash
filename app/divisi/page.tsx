@@ -5,24 +5,36 @@ import { motion } from "framer-motion";
 export default function Divisi() {
   const divisiList = [
     {
-      nama: "Satlantas",
-      deskripsi: "Bertanggung jawab atas pengaturan, penjagaan, pengawalan, dan patroli lalu lintas.",
+      nama: "SDM",
+      deskripsi: "Menyelenggarakan pembinaan sumber daya manusia Kepolisian Kisah Tanah Air, meliputi perencanaan, rekrutmen, pendidikan, pengembangan karier, kesejahteraan, dan pembinaan mental personel, dalam rangka mewujudkan personel yang profesional, bermoral, dan sejahtera.",
     },
     {
-      nama: "Reskrim",
-      deskripsi: "Menangani penyelidikan dan penyidikan tindak pidana untuk menegakkan hukum secara profesional.",
+      nama: "GARSEN",
+      deskripsi: "Melaksanakan pengamanan fisik terpadu di seluruh kawasan Objek Vital Nasional (Obvitnas) yang menjadi tanggung jawabnya.",
     },
     {
-      nama: "Intelkam",
-      deskripsi: "Melaksanakan kegiatan intelijen dan analisa situasi keamanan masyarakat.",
-    },
-    {
-      nama: "Sabhara",
+      nama: "SATRA",
       deskripsi: "Menjaga keamanan umum dan membantu penanggulangan bencana serta tugas kemanusiaan.",
     },
     {
-      nama: "Binmas",
-      deskripsi: "Melaksanakan pembinaan masyarakat agar sadar hukum dan tertib sosial.",
+      nama: "SATGASSUS",
+      deskripsi: "Mengumpulkan informasi tentang ancaman keamanan.",
+    },
+    {
+      nama: "SPIK",
+      deskripsi: "Bertugas menjaga disiplin, tata tertib, dan etika anggota kepolisian.",
+    },
+    {
+      nama: "DIVISI HUKUM",
+      deskripsi: "Melakukan pengawasan terhadap proses penyelidikan dan penyidikan dan memberikan pendapat hukum kepada petinggi kepolisian terhadap kasus-kasus yang sedang ditangani oleh pihak-pihak yang terlibat dalam kegiatan penyelidikan dan penyidikan kepolisian.",
+    },
+    {
+      nama: "TRAYANA",
+      deskripsi: "Mengelola lalu lintas dan angkutan jalan serta menegakkan hukum di bidang lalu lintas dan angkutan jalan.",
+    },
+    {
+      nama: "GARUDA",
+      deskripsi: "Melakukan pengamanan fisik terhadap objek vital nasional dan melaksanakan tugas-tugas kemanusiaan.",
     },
   ];
 
