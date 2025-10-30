@@ -34,7 +34,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(20px) brightness(0.4);
+  filter: blur(20px) brightness(0.1);
   transform: scale(1.05);
   z-index: 0;
 }

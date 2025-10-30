@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 export default function Galeri() {
   const galeri = [
-    { src: "/galeri1.jpg", caption: "Patroli Malam" },
-    { src: "/galeri2.jpg", caption: "Upacara Bendera" },
-    { src: "/galeri3.jpg", caption: "Operasi Lalu Lintas" },
-    { src: "/galeri4.jpg", caption: "Pelatihan Anggota" },
-    { src: "/galeri5.jpg", caption: "Pengamanan Event" },
-    { src: "/galeri6.jpg", caption: "Apel Kesiapan" },
+    { src: "/galeri6.png", caption: "Patroli Malam" },
+    { src: "/galeri6.png", caption: "Upacara Bendera" },
+    { src: "/galeri6.png", caption: "Operasi Lalu Lintas" },
+    { src: "/galeri6.png", caption: "Pelatihan Anggota" },
+    { src: "/galeri6.png", caption: "Pengamanan Event" },
+    { src: "/galeri6.png", caption: "Apel Kesiapan" },
   ];
 
   return (
