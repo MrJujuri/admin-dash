@@ -14,7 +14,7 @@ export default function Galeri() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-950 to-black text-white">
+    <div className="page-bg min-h-screen bg-gradient-to-b from-blue-950 to-black text-white">
       <div className="max-w-6xl mx-auto py-20 px-8">
         <h1 className="text-4xl font-bold mb-8 text-center">Galeri Dokumentasi</h1>
         <p className="text-blue-200 mb-10 text-center">
