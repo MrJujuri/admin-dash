@@ -6,24 +6,34 @@ import styled from "styled-components";
 
 // Styled-components untuk Pop-up
 const ClickButton = styled.div`
-  background: transparent;
-  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 50%;
   cursor: pointer;
-  width: 40px;
-  text-align: center;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: bold;
+  transition: 0.2s;
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
 `;
 
 const PopupCard = styled.div`
-  width: 80%;
+  position: relative;
+  width: 90%;
   max-width: 1000px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
 `;
 
 const Overlay = styled.div`
@@ -34,6 +44,10 @@ const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default function Galeri() {
@@ -48,9 +62,7 @@ export default function Galeri() {
 
   const [selected, setSelected] = useState<{ src: string; caption: string } | null>(null);
 
-  const togglePopup = () => {
-    setSelected(null); // Menutup pop-up jika gambar di-click
-  };
+  const togglePopup = () => setSelected(null);
 
   return (
     <div className="page-bg min-h-screen relative bg-gradient-to-b from-blue-950 to-black text-white">
@@ -89,15 +101,16 @@ export default function Galeri() {
 
       {/* Pop-up Overlay */}
       {selected && (
-        <Overlay>
-          <PopupCard>
+        <Overlay onClick={togglePopup}>
+          <PopupCard onClick={(e) => e.stopPropagation()}>
             <Image
               src={selected.src}
               alt={selected.caption}
-              width={1200} // Lebih besar
-              height={800} // Lebih besar
-              className="object-contain w-full h-auto"
+              width={1200}
+              height={800}
+              className="object-contain w-full h-auto rounded-xl"
             />
+            <p className="text-center text-blue-200 mt-3">{selected.caption}</p>
             <ClickButton onClick={togglePopup}>×</ClickButton>
           </PopupCard>
         </Overlay>
