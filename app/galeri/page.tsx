@@ -65,7 +65,7 @@ export default function Galeri() {
             onClick={() => setSelected(null)}
           >
             <motion.div
-              className="relative max-w-4xl w-full"
+              className="relative w-full max-w-4xl flex justify-center"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
