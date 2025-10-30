@@ -33,7 +33,7 @@ export default function RootLayout({
         <nav className="sticky top-0 z-50 flex justify-between items-center px-10 py-5 bg-blue-950/90 backdrop-blur-md border-b border-blue-900">
           <div className="flex items-center gap-3">
             <Image
-              src="/police-logo.png"
+              src="/logo_polisi.png"
               alt="Logo Polisi"
               width={40}
               height={40}
