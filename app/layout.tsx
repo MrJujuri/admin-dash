@@ -39,8 +39,14 @@ export default function RootLayout({
               height={40}
               className="rounded-md"
             />
-            <h1 className="text-lg font-bold tracking-wide">Kepolisian Kisah Tanah Air</h1>
+            {/* Judul bisa diklik ke Beranda */}
+            <Link href="/" className="hover:text-blue-300 transition">
+              <h1 className="text-lg font-bold tracking-wide cursor-pointer">
+                Kepolisian Kisah Tanah Air
+              </h1>
+            </Link>
           </div>
+
           <div className="flex gap-6 text-sm font-semibold">
             <Link href="/" className="hover:text-blue-300 transition">
               Beranda
