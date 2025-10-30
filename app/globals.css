@@ -44,3 +44,7 @@ body {
   position: relative;
   z-index: 1;
 }
+
+body, button, a, div {
+  cursor: url("/cursor.cur") 16 16, auto;
+}
