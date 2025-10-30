@@ -30,14 +30,16 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/background.png"); /* ubah sesuai nama file di /public */
+  background-image:
+    linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(0, 0, 0, 0.9)),
+    url("/background.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(20px) brightness(0.1);
+  filter: blur(20px) brightness(1.5);
   transform: scale(1.05);
   z-index: 0;
 }
+
 
 .page-bg > * {
   position: relative;
