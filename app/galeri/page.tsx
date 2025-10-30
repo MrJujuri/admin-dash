@@ -6,24 +6,24 @@ import styled from "styled-components";
 
 // Styled-components untuk Pop-up
 const ClickButton = styled.div`
-  background: powderblue;
+  background: transparent;
   padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
   cursor: pointer;
-  width: 90px;
+  width: 40px;
   text-align: center;
+  color: white;
+  font-size: 24px;
 `;
 
 const PopupCard = styled.div`
-  width: 300px;
+  width: 80%;
+  max-width: 1000px;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -150px;
-  background-color: white;
-  padding: 40px;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 0;
 `;
 
 const Overlay = styled.div`
@@ -94,12 +94,11 @@ export default function Galeri() {
             <Image
               src={selected.src}
               alt={selected.caption}
-              width={500}
-              height={300}
-              className="object-cover w-full h-60"
+              width={1200} // Lebih besar
+              height={800} // Lebih besar
+              className="object-contain w-full h-auto"
             />
-            <p className="text-center text-blue-200 mt-3">{selected.caption}</p>
-            <ClickButton onClick={togglePopup}>Close</ClickButton>
+            <ClickButton onClick={togglePopup}>×</ClickButton>
           </PopupCard>
         </Overlay>
       )}
