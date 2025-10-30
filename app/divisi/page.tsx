@@ -31,7 +31,7 @@ export default function Divisi() {
       <div className="max-w-6xl mx-auto py-20 px-8">
         <h1 className="text-4xl font-bold mb-10 text-center">Divisi & Tugas Pokok</h1>
         <p className="text-blue-200 mb-12 text-center">
-          Berikut daftar divisi utama dalam struktur Kepolisian Negara Republik Indonesia beserta tanggung jawab utamanya.
+          Berikut daftar divisi utama dalam struktur Kepolisian Kisah Tanah Air beserta tanggung jawab utamanya.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

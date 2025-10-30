@@ -27,7 +27,7 @@ export default function Tupoksi() {
       <div className="max-w-5xl mx-auto py-20 px-8">
         <h1 className="text-4xl font-bold mb-8 text-center">Tugas Pokok dan Fungsi (Tupoksi)</h1>
         <p className="text-blue-200 mb-10 text-center">
-          Sebagai aparat penegak hukum, Kepolisian Negara memiliki tanggung jawab utama yang dijalankan dengan semangat Tribrata dan Catur Prasetya.
+          Sebagai aparat penegak hukum, Kepolisian Kisah Tanah Air memiliki tanggung jawab utama yang dijalankan dengan semangat Tribrata dan Catur Prasetya.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-8">

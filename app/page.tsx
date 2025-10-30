@@ -20,7 +20,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center py-5 text-sm text-blue-300 border-t border-blue-800">
-        © 2025 Kepolisian Negara Republik — Semua Hak Dilindungi
+        © 2025 Kepolisian Kisah Tanah Air — Semua Hak Dilindungi
       </footer>
     </div>
   );

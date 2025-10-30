@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kepolisian Negara Republik Indonesia",
-  description: "Website resmi dokumentasi, divisi, dan kegiatan Kepolisian Negara Republik Indonesia.",
+  title: "Kepolisian Kisah Tanah Air",
+  description: "Website resmi dokumentasi, divisi, dan kegiatan Kepolisian Kisah Tanah Air.",
 };
 
 export default function RootLayout({
@@ -39,7 +39,7 @@ export default function RootLayout({
               height={40}
               className="rounded-md"
             />
-            <h1 className="text-lg font-bold tracking-wide">Kepolisian Negara</h1>
+            <h1 className="text-lg font-bold tracking-wide">Kepolisian Kisah Tanah Air</h1>
           </div>
           <div className="flex gap-6 text-sm font-semibold">
             <Link href="/" className="hover:text-blue-300 transition">
@@ -65,7 +65,7 @@ export default function RootLayout({
 
         {/* Footer Global */}
         <footer className="text-center py-8 text-blue-300 border-t border-blue-800 mt-20">
-          © 2025 Kepolisian Negara Republik Indonesia — Semua Hak Dilindungi
+          © 2025 Kepolisian Kisah Tanah Air — Semua Hak Dilindungi
         </footer>
       </body>
     </html>
