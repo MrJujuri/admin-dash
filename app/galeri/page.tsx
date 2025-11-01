@@ -73,13 +73,22 @@ export default function Galeri() {
           animation={{ fade: 300, swipe: 250 }}
           controller={{ closeOnBackdropClick: true }}
           styles={{
-            container: { backgroundColor: "rgba(0, 0, 0, 0.85)" },
+            container: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
           }}
           render={{
             slideFooter: () => (
-              <p className="text-center text-blue-300 mt-4 font-semibold tracking-wide drop-shadow-md">
-                {galeri[index!].caption}
-              </p>
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "40px",
+                  width: "100%",
+                  textAlign: "center",
+                }}
+              >
+                <p className="text-blue-300 text-lg font-semibold tracking-wide drop-shadow-md bg-black/40 inline-block px-6 py-2 rounded-lg backdrop-blur-sm">
+                  {galeri[index!].caption}
+                </p>
+              </div>
             ),
           }}
         />
