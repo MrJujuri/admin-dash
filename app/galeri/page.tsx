@@ -30,7 +30,7 @@ export default function Galeri() {
           {galeri.map((item, i) => (
             <div
               key={i}
-              className="rounded-xl overflow-hidden border border-blue-800 hover:scale-105 transition-transform cursor-pointer"
+              className="relative rounded-xl overflow-hidden border border-blue-800 hover:scale-105 transition-transform cursor-pointer group"
               onClick={() => setIndex(i)}
             >
               <Image
@@ -40,13 +40,22 @@ export default function Galeri() {
                 height={300}
                 className="object-cover w-full h-60"
               />
-              <div className="p-3 bg-blue-900/70 text-center text-sm">{item.caption}</div>
+
+              {/* Caption overlay */}
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 text-center">
+                <p className="text-blue-200 font-semibold tracking-wide text-sm drop-shadow-md group-hover:text-blue-300 transition">
+                  {item.caption.toUpperCase()}
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <Link href="/" className="text-blue-400 hover:text-blue-300 font-semibold transition">
+          <Link
+            href="/"
+            className="text-blue-400 hover:text-blue-300 font-semibold transition"
+          >
             ← Kembali ke Beranda
           </Link>
         </div>
@@ -68,7 +77,7 @@ export default function Galeri() {
           }}
           render={{
             slideFooter: () => (
-              <p className="text-center text-blue-300 mt-4">
+              <p className="text-center text-blue-300 mt-4 font-semibold tracking-wide drop-shadow-md">
                 {galeri[index!].caption}
               </p>
             ),
