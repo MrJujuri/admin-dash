@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
+import PageTransition from "./components/PageTransition"; // ⬅️ Tambahan
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kepolisian Kisah Tanah Air",
-  description: "Website resmi dokumentasi, divisi, dan kegiatan Kepolisian Kisah Tanah Air.",
+  description:
+    "Website resmi dokumentasi, divisi, dan kegiatan Kepolisian Kisah Tanah Air.",
 };
 
 export default function RootLayout({
@@ -29,6 +31,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-blue-950 to-black text-white min-h-screen`}
       >
+        {/* Loading animasi global */}
+        <PageTransition />
+
         {/* Navbar Global */}
         <nav className="sticky top-0 z-50 flex justify-between items-center px-10 py-5 bg-blue-950/90 backdrop-blur-md border-b border-blue-900">
           <div className="flex items-center gap-3">
@@ -39,7 +44,6 @@ export default function RootLayout({
               height={40}
               className="rounded-md"
             />
-            {/* Judul bisa diklik ke Beranda */}
             <Link href="/" className="hover:text-blue-300 transition">
               <h1 className="text-lg font-bold tracking-wide cursor-pointer">
                 Kepolisian Kisah Tanah Air
@@ -51,9 +55,6 @@ export default function RootLayout({
             <Link href="/" className="hover:text-blue-300 transition">
               Beranda
             </Link>
-            {/* <Link href="/dokumentasi" className="hover:text-blue-300 transition">
-              Dokumentasi
-            </Link> */}
             <Link href="/divisi" className="hover:text-blue-300 transition">
               Divisi
             </Link>
