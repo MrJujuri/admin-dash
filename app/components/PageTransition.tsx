@@ -9,13 +9,13 @@ export default function PageTransition() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Saat halaman pertama kali load
-    const timer = setTimeout(() => setLoading(false), 1000);
+    // Saat pertama kali buka web
+    const timer = setTimeout(() => setLoading(false), 1200);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    // Saat ganti halaman
+    // Saat pindah halaman
     setLoading(true);
     const timer = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timer);
@@ -26,13 +26,13 @@ export default function PageTransition() {
       {loading && (
         <motion.div
           key="page-loading"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/90 backdrop-blur-md"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black"
         >
-          {/* Logo animasi */}
+          {/* Logo polisi dengan animasi masuk */}
           <motion.img
             src="/logo_polisi.png"
             alt="Loading"
@@ -42,7 +42,7 @@ export default function PageTransition() {
             className="w-24 h-24 mb-6"
           />
 
-          {/* Text loading */}
+          {/* Teks “Memuat...” */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
