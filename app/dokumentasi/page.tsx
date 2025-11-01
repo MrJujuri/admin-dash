@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Dokumentasi() {
-  const kegiatan = [
+  const data = [
     {
       title: "Operasi Malam",
       desc: "Patroli malam menjaga keamanan di wilayah perkotaan.",
@@ -33,53 +33,53 @@ export default function Dokumentasi() {
   return (
     <div className="page-bg min-h-screen bg-gradient-to-b from-blue-950 to-black text-white overflow-hidden">
       <div className="max-w-6xl mx-auto py-20 px-8">
-        {/* Judul dengan animasi masuk */}
+        {/* Heading */}
         <motion.h1
-          className="text-4xl font-bold mb-8 text-center"
-          initial={{ opacity: 0, y: -25 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold mb-8 text-center"
         >
           Dokumentasi Pekerjaan Polisi
         </motion.h1>
 
-        {/* Deskripsi singkat */}
         <motion.p
-          className="text-blue-200 mb-12 text-center max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="text-blue-200 mb-10 text-center"
         >
           Berikut adalah catatan kegiatan dan tugas yang telah dilaksanakan oleh personel kepolisian.
         </motion.p>
 
-        {/* Grid kegiatan dengan animasi tiap kartu */}
+        {/* Grid Card */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {kegiatan.map((item, index) => (
+          {data.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="relative bg-blue-900/40 border border-blue-700 rounded-xl p-6 hover:bg-blue-800/60 transition group"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 0px 20px rgba(59, 130, 246, 0.4)",
+                transition: { duration: 0.3 },
+              }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-blue-900/40 border border-blue-700 rounded-xl p-6 cursor-pointer hover:bg-blue-800/60 transition"
             >
-              {/* Efek highlight saat hover */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-300" />
-              <h2 className="text-xl font-semibold mb-2 relative z-10">
-                {item.title}
-              </h2>
-              <p className="text-sm text-blue-200 relative z-10">{item.desc}</p>
+              <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
+              <p className="text-sm text-blue-200">{item.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Tombol kembali */}
+        {/* Back Link */}
         <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
           className="mt-12 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
         >
           <Link
             href="/"
