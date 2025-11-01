@@ -67,7 +67,7 @@ export default function RootLayout({
           </nav>
 
           {/* Konten Halaman */}
-          <main className="pt-10">{children}</main>
+          <main className="pt-10 px-4 sm:px-10">{children}</main>
 
           {/* Footer Global */}
           <footer className="text-center py-8 text-blue-300 border-t border-blue-800 mt-20">

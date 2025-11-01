@@ -52,7 +52,7 @@ export default function Galeri() {
         </div>
       </div>
 
-      {/* Lightbox tampil ketika gambar diklik */}
+      {/* Lightbox */}
       {index !== null && (
         <Lightbox
           open={index !== null}
@@ -60,13 +60,18 @@ export default function Galeri() {
           close={() => setIndex(null)}
           slides={galeri.map((item) => ({
             src: item.src,
-            description: item.caption,
           }))}
           animation={{ fade: 300, swipe: 250 }}
           controller={{ closeOnBackdropClick: true }}
           styles={{
             container: { backgroundColor: "rgba(0, 0, 0, 0.85)" },
-            description: { color: "#a5b4fc", textAlign: "center", marginTop: "10px" },
+          }}
+          render={{
+            slideFooter: () => (
+              <p className="text-center text-blue-300 mt-4">
+                {galeri[index!].caption}
+              </p>
+            ),
           }}
         />
       )}
